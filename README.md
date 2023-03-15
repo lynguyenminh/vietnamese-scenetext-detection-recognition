@@ -6,11 +6,26 @@
 
 ## 1. Installation
 ### 1. Using docker (Recommended)
+Pull docker images: 
+```
+docker pull lynguyenminh/scenetext-api:v1
+```
+
+Git clone source code: 
+```
+git clone https://github.com/lynguyenminh/vietnamese--scenetext-detection-recognition-api.git
+```
+
+Run container: 
+```
+docker run -it --name scenetext-api-v1 -p 5000:5000 -v ./vietnamese--scenetext-detection-recognition-api/:/vietnamese--scenetext-detection-recognition-api lynguyenminh/scenetext-api:v1
+```
+
 
 
 ### 1.2. Using in virtualenv or local (Not Recommended)
 ```
-git clone https://github.com/lynguyenminh/vietnamese-scenetext-detection-recognition-api.git && cd vietnamese-scenetext-detection-recognition-api
+git clone https://github.com/lynguyenminh/vietnamese--scenetext-detection-recognition-api.git && cd vietnamese--scenetext-detection-recognition-api
 !pip install -r requirements.txt
 
 cd parseq
@@ -23,7 +38,7 @@ pip install torch==1.10.0 torchtext==0.11.0
 ## 2. Run 
 
 ```
-cd vietnamese-scenetext-detection-recognition-api && streamlit run Home.py
+cd vietnamese--scenetext-detection-recognition-api && streamlit run 01_Home.py --server.port 5000
 ```
 
 
