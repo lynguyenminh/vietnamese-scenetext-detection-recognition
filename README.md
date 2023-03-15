@@ -22,6 +22,7 @@ docker run -it --name scenetext-api-v1 -p 5000:5000 -v ./vietnamese-scenetext-de
 ```
 Download weights: 
 ```
+cd vietnamese-scenetext-detection-recognition-api
 sh download_models.sh
 ```
 
@@ -30,8 +31,8 @@ sh download_models.sh
 Download source code and install environment: 
 ```
 git clone https://github.com/lynguyenminh/vietnamese-scenetext-detection-recognition-api.git
-sh download_models.sh
 cd vietnamese-scenetext-detection-recognition-api
+sh download_models.sh
 pip install -r requirements.txt
 
 cd parseq
@@ -44,7 +45,7 @@ pip install torch==1.10.0 torchtext==0.11.0
 ## 2. Run application
 
 ```
-cd vietnamese-scenetext-detection-recognition-api && streamlit run 01_Home.py --server.port 5000
+streamlit run 01_Home.py --server.port 5000
 ```
 
 
