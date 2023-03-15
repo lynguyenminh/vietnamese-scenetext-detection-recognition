@@ -10,7 +10,7 @@
 
 ### 1.2. Using in virtualenv or local (Not Recommended)
 ```
-git clone https://github.com/lynguyenminh/scenetext-api.git && cd scenetext-api
+git clone https://github.com/lynguyenminh/vietnamese-scenetext-detection-recognition-api.git && cd vietnamese-scenetext-detection-recognition-api
 !pip install -r requirements.txt
 
 cd parseq
@@ -23,7 +23,7 @@ pip install torch==1.10.0 torchtext==0.11.0
 ## 2. Run 
 
 ```
-cd scenetext-api && streamlit run Home.py
+cd vietnamese-scenetext-detection-recognition-api && streamlit run Home.py
 ```
 
 
