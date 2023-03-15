@@ -13,20 +13,26 @@ docker pull lynguyenminh/scenetext-api:v1
 
 Git clone source code: 
 ```
-git clone https://github.com/lynguyenminh/vietnamese--scenetext-detection-recognition-api.git
+git clone https://github.com/lynguyenminh/vietnamese-scenetext-detection-recognition-api.git
 ```
 
 Run container: 
 ```
-docker run -it --name scenetext-api-v1 -p 5000:5000 -v ./vietnamese--scenetext-detection-recognition-api/:/vietnamese--scenetext-detection-recognition-api lynguyenminh/scenetext-api:v1
+docker run -it --name scenetext-api-v1 -p 5000:5000 -v ./vietnamese-scenetext-detection-recognition-api/:/vietnamese-scenetext-detection-recognition-api lynguyenminh/scenetext-api:v1
 ```
-
+Download weights: 
+```
+sh download_models.sh
+```
 
 
 ### 1.2. Using in virtualenv or local (Not Recommended)
+Download source code and install environment: 
 ```
-git clone https://github.com/lynguyenminh/vietnamese--scenetext-detection-recognition-api.git && cd vietnamese--scenetext-detection-recognition-api
-!pip install -r requirements.txt
+git clone https://github.com/lynguyenminh/vietnamese-scenetext-detection-recognition-api.git
+sh download_models.sh
+cd vietnamese-scenetext-detection-recognition-api
+pip install -r requirements.txt
 
 cd parseq
 pip install -r requirements.txt
@@ -35,10 +41,10 @@ pip install torch==1.10.0 torchtext==0.11.0
 ```
 
 
-## 2. Run 
+## 2. Run application
 
 ```
-cd vietnamese--scenetext-detection-recognition-api && streamlit run 01_Home.py --server.port 5000
+cd vietnamese-scenetext-detection-recognition-api && streamlit run 01_Home.py --server.port 5000
 ```
 
 
