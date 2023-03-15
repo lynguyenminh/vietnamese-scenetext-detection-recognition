@@ -1,4 +1,4 @@
-pip install -r gdown --upgrade
+pip install gdown --upgrade
 pip install unzip
 
 
